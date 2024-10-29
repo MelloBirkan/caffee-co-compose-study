@@ -44,18 +44,23 @@ class MainActivity : ComponentActivity() {
 
 @Preview(showBackground = true)
 @Composable
-private fun ProductItem() {
-  Column {
-    Box(modifier = Modifier
-      .height(50.dp)
-      .width(50.dp)
-      .background(Color.Blue)
+private fun ProductItem(modifier: Modifier = Modifier) {
+  Column(
+    modifier
+      .height(250.dp)
+      .width(250.dp)
+  ) {
+    Box(
+      modifier
+        .height(50.dp)
+        .width(50.dp)
+        .background(Color.Blue)
     )
 
-      Image(
-        painter = painterResource(R.drawable.ic_launcher_background),
-        contentDescription = null
-      )
+    Image(
+      painter = painterResource(R.drawable.ic_launcher_background),
+      contentDescription = null
+    )
 
     Text("Texto1")
 
